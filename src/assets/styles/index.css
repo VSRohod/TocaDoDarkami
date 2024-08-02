@@ -1,0 +1,21 @@
+header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#headerContent{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.525);
+}
+
+header > .backgroundBanner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}

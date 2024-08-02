@@ -1,0 +1,186 @@
+@font-face {
+    font-family: Chocolizious;
+    src: url(./../fonts/chocolizious/Chocolizious.ttf);
+}
+
+/* root */
+:root{
+    --black : #252525;
+    --white : #f2f2f2;
+    --yellow : #ffbe0b;
+    --orange : #fb5607;
+    --pink : #ff006e;
+    --purple : #8338ec;
+    --blue : #3a86ff;
+    --blue2 : #473aff;
+    --cian : #4cc9f0;
+    --h1 : 40pt;
+    --h2 : 32pt;
+    --h3 : 26pt;
+    --h4 : 22pt;
+    --h5 : 20pt;
+    --p1 : 14pt;
+    --p2 : 12pt;
+}
+
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Roboto';
+    color: var(--black);
+    font-size: var(--p1);
+}
+
+
+
+/* page elements */
+
+section{
+    width: 100%;
+    display: flex;
+    margin: 0 0 1rem 0;
+}
+
+aside{
+    width: 50%;
+    box-sizing: border-box;
+    padding: 1rem;
+    display: flex; 
+}
+
+p{
+    margin: 0.5rem;
+}
+
+footer{
+    width: 100%;
+    padding: 1rem 0rem;
+    background-color: var(--blue);
+    display: flex;
+}
+
+
+
+/* themes */
+.darkTheme{
+    background-color: var(--black);
+    color: var(--white);
+}
+.whiteTheme{
+    background-color: var(--white);
+    color: var(--black);
+}
+
+
+
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--white);
+    text-align: center;
+    font-family: Chocolizious;
+}
+
+h1{
+    font-size: var(--h1);
+}
+
+h2{
+    font-size: var(--h2);
+}
+
+h3{
+    font-size: var(--h3);
+}
+
+h4{
+    font-size: var(--h4);
+    margin: 1rem;
+}
+
+h5{
+    font-size: var(--h5);
+}
+
+.whiteText{
+    color: var(--white);
+}
+
+
+
+/* links */
+a{
+    text-decoration: none;
+    color: var(--purple);  
+}
+
+
+
+/* class */
+/* flexbox class */
+.flex{
+    display: flex;
+}
+
+.middleCenter{
+    justify-content: center;
+    align-items: center;
+}
+
+.colummAlign{
+    flex-direction: column;
+}
+
+.spaceBetweenX{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.spaceBetweenY{
+    justify-content: center;
+    align-items: space-between;
+}
+
+
+
+/* image class */
+.imagesX{
+    width: 100%;
+}
+
+.imagesY{
+    height: 100%;
+}
+
+.backGroundImageTop{
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.grayScale{
+    filter: grayScale(100%);
+}
+
+.photosRounded{
+    border-radius: 100%;
+}
+
+
+
+/* icons class */
+.navIcon{
+    width: 2rem;
+    margin: 2rem;
+    animation-duration: 2s!important;
+    animation-iteration-count: infinite!important;
+}
+
+
+
+/* spacing */
+.padding1{
+    padding: 1rem;
+}
+
+.margin1{
+    margin: 1rem;
+}
