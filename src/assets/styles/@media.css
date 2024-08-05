@@ -2,4 +2,8 @@
     header > .backgroundBanner > video {
         width: 120%;
     }
+
+    .galeria{
+        grid-template-columns: repeat(2,1fr);
+    }
 }

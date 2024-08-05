@@ -1,3 +1,15 @@
+@keyframes move-down {
+    0%{
+        top: 10%;
+    }
+    50%{
+        top:15%
+    }
+    100%{
+        top: 50%;
+    }
+}
+
 @font-face {
     font-family: Chocolizious;
     src: url(./../fonts/chocolizious/Chocolizious.ttf);
@@ -31,7 +43,10 @@
     font-size: var(--p1);
 }
 
-
+body{
+    overflow-x: hidden;
+    background-color: var(--black);
+}
 
 /* page elements */
 
@@ -121,6 +136,10 @@ a{
     display: flex;
 }
 
+.wrap{
+    flex-wrap: wrap;
+}
+
 .middleCenter{
     justify-content: center;
     align-items: center;
@@ -138,6 +157,62 @@ a{
 .spaceBetweenY{
     justify-content: center;
     align-items: space-between;
+}
+
+.justifyCenter{
+    justify-content: center;
+}
+
+.alignCenter{
+    align-items: center;
+}
+
+/* grid orientation */
+.w-1{
+    grid-column: span 1;
+}
+
+.w-2{
+    grid-column: span 2;
+}
+
+.w-3{
+    grid-column: span 3;
+}
+
+.w-4{
+    grid-column: span 4;
+}
+
+.w-5{
+    grid-column: span 5;
+}
+
+.w-6{
+    grid-column: span 6;
+}
+
+.h-1{
+    grid-row: span 1;
+}
+.h-2{
+    grid-row: span 2;
+}
+
+.h-3{
+    grid-row: span 3;
+}
+
+.h-4{
+    grid-row: span 4;
+}
+
+.h-5{
+    grid-row: span 5;
+}
+
+.h-6{
+    grid-row: span 6;
 }
 
 
@@ -164,8 +239,6 @@ a{
     border-radius: 100%;
 }
 
-
-
 /* icons class */
 .navIcon{
     width: 2rem;
@@ -184,3 +257,60 @@ a{
 .margin1{
     margin: 1rem;
 }
+
+/* galeria */
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-auto-rows: 100px 300px;
+    grid-gap:10px;
+    grid-auto-flow: dense;
+}
+
+.galeriaItem{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.galeriaItem .imagemItem{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.galeriaItem .imagemItem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    cursor: pointer;
+    transition: .5s ease-in-out ;
+}
+
+.galeriaItem:hover .imagemItem img{
+    transform: scale(1.5);
+}
+
+.galeriaItem .textoItem{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 25px;
+    pointer-events: none;
+    z-index:4;
+    transition: .3 ease-in-out;
+    -webkit-backdrop-filter: blur(5px) saturate(1.8);
+    backdrop-filter: blur(5px) saturate(1.8);
+}
+
+.galeriaItem:hover .textoItem{
+    opacity: 1;
+    animation: move-down .3s linear;
+    padding: 1em;
+    width: 100%;
+}
+
